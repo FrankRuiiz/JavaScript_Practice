@@ -1,3 +1,7 @@
+## Javascript Logic / Practice Problems
+
+- Below are javascript practice problems in varying difficulty.
+
 ### Level 1
 - <a href="practice02/README.md" target="_blank">Array reverser</a>
 - <a href="practice03/README.md" target="_blank">Data Type Sorter</a>
