@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitting Words</title>
+    <script>
+        var myArray = ['caterpillar', 'cat', 'whale', 'accurate', 'smile', 'cactus', 'cute', 'aaa'];
+        var string = 'cat';
+
+        function fittingWords(string, array){
+            var output = [];
+            var temp = '';
+            for(var i = 0; i < array.length; i++) {
+                temp = '';
+                for(var s = 0; s < string.length; s++) {
+                    if(array[i].indexOf(string.charAt(s)) !== -1) {
+                        temp+= string[s];
+                        if(temp.length === 3) {
+                            output.push(array[i]);
+                            continue;
+                        }
+                        else {
+                            continue;
+                        }
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            }
+            return output;
+        }
+
+        var result = fittingWords(string,myArray);
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+
+<!-- - Write a function that takes two parameters-->
+<!-- - Parameter 1 - A string-->
+<!-- - Parameter 2 - An array of strings-->
+<!-- - The function should output all the words from the input array (parameter 2) that are longer than the input string (parameter 1)-->
+<!-- - Example:-->
+<!-- - `var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];`-->
+<!-- - `fittingWords('cat', myArray);`-->
+<!-- - Output - `['cat','caterpillar','accurate','cactus']`-->
+
+</body>
+</html>

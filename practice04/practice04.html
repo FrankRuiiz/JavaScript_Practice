@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice04</title>
+    <script>
+        var myArray = ["mouse", "dog", "cat", "human"];
+        var output = [];
+
+        function bubbleSort(array) {
+            //puts length of array in variable length
+            var array_length = array.length;
+            for (var i = (array_lengthlength - 1); i >= 0; i--) {
+                for (var j = (array_length - i); j > 0; j--) {
+                    //Compare the adjacent positions
+                    if(array[j] < array[j-1]) {
+                        //Swap the numbers
+                        var tmp = array[j];
+                        arrau[j] = array[j-1];
+                        array[j-1] = tmp;
+                    }
+                }
+            }
+            output.push(items);
+        }
+
+        result = bubbleSort(myArray);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

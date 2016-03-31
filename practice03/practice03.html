@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice03</title>
+    <script>
+        var mixedArray = ["Frank", true, "hello", 15, 7, true, false, "gym", 40];
+        var string = [];
+        var number = [];
+        var boolean = [];
+        var output = [];
+
+        function groupArray(arr) {
+            for(i=0; i < arr.length; i++) {
+                if(typeof(arr[i]) === "string") {
+                    string.push(arr[i]);
+                }
+                else if(typeof(arr[i]) === "number") {
+                    number.push(arr[i]);
+                }
+                else if(typeof(arr[i]) === "boolean") {
+                    boolean.push(arr[i]);
+                }
+                else {
+                    continue;
+                }
+            }
+            output.push(string, number, boolean);
+            console.log(output);
+        }
+
+        groupArray(mixedArray);
+        //put different datatype arrays into an object
+        //don't use an if statement to populate the arrays
+        //use typeof's output inside brackets to set items inside the array
+
+    </script>
+
+</head>
+<body>
+    <div>
+        <h1>## One to Multi</h1>
+
+        <h3>Build a function that sorts an array into a multidimensional array grouped by data type</h3>
+
+        <p>
+            - Write a function that takes one parameterbr <br>
+            - Parameter 1 - An array of anything <br>
+            - The function should output a multidimensional array grouped by data type <br>
+            - Example: <br>
+            - `var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];` <br>
+            - `groupArray(myArray);` <br>
+            - Output - `[['hello, 'goodbye', '25'], [34, 56, 12], [true, false, true]]` <br>
+        </p>
+    </div>
+</body>
+</html>
