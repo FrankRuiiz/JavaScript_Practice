@@ -10,6 +10,7 @@
         var boolean = [];
         var output = [];
 
+        // Using a For Loop
         function groupArray(arr) {
             for(i=0; i < arr.length; i++) {
                 if(typeof(arr[i]) === "string") {
@@ -30,9 +31,56 @@
         }
 
         groupArray(mixedArray);
+
+        // Using a higher order function
+
+        var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+        function groupArray2(array) {
+            var output = [];
+            var numArr = [];
+            var strArr = [];
+            var boolArr = [];
+
+            array.forEach(function(item){
+               if(typeof item === 'string') {
+                   strArr.push(item);
+               }
+                else if (typeof item === 'number'){
+                   numArr.push(item);
+               }
+                else if (typeof  item === 'boolean') {
+                   boolArr.push(item);
+               }
+            });
+
+            output.push(numArr, strArr, boolArr);
+            console.log(output);
+        }
+
+        groupArray2(myArray);
+
         //put different datatype arrays into an object
         //don't use an if statement to populate the arrays
         //use typeof's output inside brackets to set items inside the array
+        var myArray2 = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+        function ObjArrGrps(array) {
+            var dataTypesObj = {
+                string: [],
+                number: [],
+                boolean: []
+            };
+
+            array.forEach(function(item){
+               var itemType = typeof item;
+               dataTypesObj[itemType].push(item);
+            });
+
+            return dataTypesObj;
+        }
+
+        console.log(ObjArrGrps(myArray2));
 
     </script>
 
