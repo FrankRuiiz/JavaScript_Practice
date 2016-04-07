@@ -5,19 +5,51 @@
     <title>Title</title>
     <script>
 
+
+        // This example  creates and returns the temporary 'output' array and then stores that value in the global 'result' variable
         var siblings = ["Frank", "Johanna", "Mayra", "Alex"];
 
-
         function reverseArray(array){
+            //temporary array
             var output = [];
+            // Iterating the array backwards and pushing the value at [i] to the output array
             for(i = array.length-1; i >= 0; i--){
                 output.push(array[i]);
             }
+            //output returned
             return output;
         }
 
         var result = reverseArray(siblings);
         console.log(result);
+
+
+
+        // This method doesn't use a temporary array variable, instead it swaps the value positions
+        var myArray = ['hello', 45, 'bob', 'what', '23'];
+
+        function reverseArray2(array) {
+            // Create two variable for first and last of array
+            var first = 0;
+            var last = array.length-1;
+
+            // While the first number is greater than the Last number
+            while(first > last) {
+                // swap the value at index first with the value at index last
+                var temp = array[first];
+                array[first] = array[last];
+                array[last] = temp;
+                // increment and decrement the first / last variables
+                first++;
+                last--;
+            }
+            return array;
+        }
+
+        reverseArray2(myArray);
+
+        console.log(myArray);
+
 
     </script>
 </head>
