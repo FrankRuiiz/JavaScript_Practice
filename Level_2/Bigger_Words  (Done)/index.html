@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script>
+
+
+        // Solution 1
+        var namesArray = ["Frank", "Tim", "Alex", "Paul", "Jessica", "Kathy", "Christopher", "Jason"];
+
+        function longerNames(name,array) {
+            // Declare an empty array where bigger words will be pushed to
+            var longNames = [];
+            // For loop iterates from the beginning of array
+            for(i=0; i < array.length; i++) {
+                // if the current name is larger than the name param, push it to the longNames array
+                if(array[i].length > name.length) {
+                    longNames.push(array[i]);
+                }
+            }
+            return longNames;
+        }
+
+        var result1 = longerNames('Frank',namesArray);
+        // Original array is not modified
+        console.log(result1);
+        console.log(namesArray);
+
+
+        //Solution 2
+
+        var myArray =['bug', 'insect', 'mammal', 'reptile', 'mammouth', 'turtles'];
+
+        function biggerWords(string, array) {
+            var i;
+            // cache the length of string in strLen var
+            var strLen = string.length;
+
+            // Iterate from the end of the array
+            for(i=array.length-1; i>=0; i-=1) {
+                // if the current word length is <= strLen
+                if(array[i].length <= strLen) {
+                    // Splice the array at the current index
+                    array.splice(i, 1);
+                }
+            }
+            // return the modified array
+            return array;
+        }
+
+        var result2 = biggerWords('whales', myArray);
+
+        //as you can see from these logs, the original array has been modified
+        console.log(result2);
+        console.log(myArray);
+    </script>
+</head>
+<body>
+    <h1>Hello.</h1>
+</body>
+</html>
