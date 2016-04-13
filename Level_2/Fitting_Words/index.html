@@ -7,31 +7,28 @@
         var myArray = ['caterpillar', 'cat', 'whale', 'accurate', 'smile', 'cactus', 'cute', 'aaa'];
         var string = 'cat';
 
-        function fittingWords(string, array){
-            var output = [];
-            var temp = '';
-            for(var i = 0; i < array.length; i++) {
-                temp = '';
-                for(var s = 0; s < string.length; s++) {
+        function fitting_words(string, array) {
+            var output = [];            // variable to hold filtered words from input array
+            var i,s;          // variables declared
+
+            for ( i=0; i<array.length; i++ ) {      // iterates through the array parameter
+
+                var temp = '';          // temp will hold matched letters
+                for ( s=0; s<string.length; s++ ) {        // iterates through the string parameter
+
                     if(array[i].indexOf(string.charAt(s)) !== -1) {
+
                         temp+= string[s];
                         if(temp.length === 3) {
                             output.push(array[i]);
-                            continue;
                         }
-                        else {
-                            continue;
-                        }
-                    }
-                    else {
-                        continue;
                     }
                 }
             }
             return output;
         }
 
-        var result = fittingWords(string,myArray);
+        var result = fitting_words(string,myArray);
         console.log(result);
 
     </script>
