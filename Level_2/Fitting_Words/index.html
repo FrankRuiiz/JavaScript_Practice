@@ -16,10 +16,10 @@
                 var temp = '';          // temp will hold matched letters
                 for ( s=0; s<string.length; s++ ) {        // iterates through the string parameter
 
-                    if(array[i].indexOf(string.charAt(s)) !== -1) {
+                    if(array[i].indexOf(string.charAt(s)) !== -1) {  // checks to see if the string[s] is in array[i]
 
-                        temp+= string[s];
-                        if(temp.length === 3) {
+                        temp+= string[s];       // if it is add it to the temp var
+                        if(temp.length === 3) {         // once all 3 letters are found in the word we will push them to output array
                             output.push(array[i]);
                         }
                     }
